@@ -1,0 +1,33 @@
+{
+  "projectName": "my-tanstack-app",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "bun",
+  "git": true,
+  "install": true,
+  "addOnOptions": {
+    "prisma": {
+      "database": "postgres"
+    }
+  },
+  "includeExamples": true,
+  "envVarValues": {},
+  "routerOnly": false,
+  "version": 1,
+  "framework": "react",
+  "chosenAddOns": [
+    "cloudflare",
+    "form",
+    "tanstack-query",
+    "table",
+    "store",
+    "prisma",
+    "better-auth",
+    "paraglide",
+    "compiler",
+    "t3env",
+    "biome",
+    "storybook"
+  ]
+}
