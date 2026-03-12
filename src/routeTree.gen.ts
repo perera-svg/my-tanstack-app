@@ -15,7 +15,6 @@ import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-qu
 import { Route as DemoTableRouteImport } from './routes/demo/table'
 import { Route as DemoStorybookRouteImport } from './routes/demo/storybook'
 import { Route as DemoStoreRouteImport } from './routes/demo/store'
-import { Route as DemoPrismaRouteImport } from './routes/demo/prisma'
 import { Route as DemoI18nRouteImport } from './routes/demo.i18n'
 import { Route as DemoBetterAuthRouteImport } from './routes/demo/better-auth'
 import { Route as DemoFormSimpleRouteImport } from './routes/demo/form.simple'
@@ -52,11 +51,6 @@ const DemoStoreRoute = DemoStoreRouteImport.update({
   path: '/demo/store',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DemoPrismaRoute = DemoPrismaRouteImport.update({
-  id: '/demo/prisma',
-  path: '/demo/prisma',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const DemoI18nRoute = DemoI18nRouteImport.update({
   id: '/demo/i18n',
   path: '/demo/i18n',
@@ -88,7 +82,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/demo/better-auth': typeof DemoBetterAuthRoute
   '/demo/i18n': typeof DemoI18nRoute
-  '/demo/prisma': typeof DemoPrismaRoute
   '/demo/store': typeof DemoStoreRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/table': typeof DemoTableRoute
@@ -102,7 +95,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/demo/better-auth': typeof DemoBetterAuthRoute
   '/demo/i18n': typeof DemoI18nRoute
-  '/demo/prisma': typeof DemoPrismaRoute
   '/demo/store': typeof DemoStoreRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/table': typeof DemoTableRoute
@@ -117,7 +109,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/demo/better-auth': typeof DemoBetterAuthRoute
   '/demo/i18n': typeof DemoI18nRoute
-  '/demo/prisma': typeof DemoPrismaRoute
   '/demo/store': typeof DemoStoreRoute
   '/demo/storybook': typeof DemoStorybookRoute
   '/demo/table': typeof DemoTableRoute
@@ -133,7 +124,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo/better-auth'
     | '/demo/i18n'
-    | '/demo/prisma'
     | '/demo/store'
     | '/demo/storybook'
     | '/demo/table'
@@ -147,7 +137,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo/better-auth'
     | '/demo/i18n'
-    | '/demo/prisma'
     | '/demo/store'
     | '/demo/storybook'
     | '/demo/table'
@@ -161,7 +150,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/demo/better-auth'
     | '/demo/i18n'
-    | '/demo/prisma'
     | '/demo/store'
     | '/demo/storybook'
     | '/demo/table'
@@ -176,7 +164,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   DemoBetterAuthRoute: typeof DemoBetterAuthRoute
   DemoI18nRoute: typeof DemoI18nRoute
-  DemoPrismaRoute: typeof DemoPrismaRoute
   DemoStoreRoute: typeof DemoStoreRoute
   DemoStorybookRoute: typeof DemoStorybookRoute
   DemoTableRoute: typeof DemoTableRoute
@@ -230,13 +217,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoStoreRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/demo/prisma': {
-      id: '/demo/prisma'
-      path: '/demo/prisma'
-      fullPath: '/demo/prisma'
-      preLoaderRoute: typeof DemoPrismaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/demo/i18n': {
       id: '/demo/i18n'
       path: '/demo/i18n'
@@ -280,7 +260,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   DemoBetterAuthRoute: DemoBetterAuthRoute,
   DemoI18nRoute: DemoI18nRoute,
-  DemoPrismaRoute: DemoPrismaRoute,
   DemoStoreRoute: DemoStoreRoute,
   DemoStorybookRoute: DemoStorybookRoute,
   DemoTableRoute: DemoTableRoute,
